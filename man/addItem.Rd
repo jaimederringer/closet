@@ -2,45 +2,47 @@
 % Please edit documentation in R/addItem.R
 \name{addItem}
 \alias{addItem}
-\title{Add an Item to an Existing Closet}
+\title{Add an Item to Your Closet}
 \usage{
 addItem(
-  brand,
-  color,
-  description,
+  item,
   type = c("top", "bottom", "one-piece", "shoes"),
-  file.name
+  style = NA,
+  closet.file
 )
 }
 \arguments{
-\item{brand}{item brand.}
+\item{item}{description of the item.}
 
-\item{color}{item color.}
+\item{type}{must be one of \code{"top"}, \code{"bottom"}, \code{"one-piece"}
+(such as a dress or jumpsuit), or \code{"shoes"}.}
 
-\item{description}{description of the item.}
+\item{style}{(optional) one or more style category tags to apply to the item.
+Items within a style can be mixed-and-matched (for example, a
+capsule wardrobe). Items without an assigned style go with everything!}
 
-\item{type}{must be one of "top", "bottom", "one-piece" (such as a dress or jumpsuit), or
-"shoes".}
-
-\item{file.name}{name(s) of closet files to add item to.}
+\item{closet.file}{the name of the file containing your closet inventory. If
+the file does not exist, it will be created.}
 }
 \value{
 
 }
 \description{
-Add an item to one or more closet files.
+Add an Item to Your Closet
 }
 \examples{
-addItem(brand = "Gap", color = "green", description = "sweater",
-  type = "top", file.name = "work_closet.csv")
-    # the item will print elsewhere as: brand color description. So this
-    # item prints as 'Gap green sweater'.
+addItem(item = "green skirt", type = "bottom", style = "work",
+    closet.file = "closet.txt")
 
-addItem(brand = "J. Crew", color = "black",
-  description = "sleeveless jumpsuit", type = "one-piece",
-  file.name = c("work_closet.csv","fancy_closet.csv"))
+addItem(item = "black sleeveless jumpsuit", type = "one-piece",
+    style = c("work","fancy"), closet.file = "closet.txt")
+
+addItem(item = "black t-shirt", type = "top",
+    closet.file = "closet.txt")
+
+addItem(item = "brown suede ankle boots", type = "shoes",
+    closet.file = "closet.txt")
 }
 \seealso{
-\code{\link{newCloset}}, \code{\link{loadCloset}},
-  \code{\link{randomOutfit}}
+\code{\link{pickOutfit}}
 }

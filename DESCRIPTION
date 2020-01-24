@@ -1,16 +1,16 @@
 Package: closet
 Title: Pick an Outfit
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: 
     person(given = "Jaime",
            family = "Derringer",
            role = c("aut", "cre"),
            email = "jaimelane@gmail.com",
            comment = c(ORCID = "0000-0002-7352-9859"))
-Description: closet is an R package that builds randomly selected outfits from 
-  capsule wardrobes of interchangeable items. To install from github, first 
-  install the 'devtools' package in R, then run: 
-  devtools::install_github("jaimederringer/closet")
+Description: closet is an R package that builds randomly selected outfits. To 
+    install from github, first install the 'devtools' package, then run: 
+    devtools::install_github("jaimederringer/closet")
+    Use addItem() to build your closet and pickOutfit() to make an outfit.
 License: GNU General Public License (GPL) 3.0
 Encoding: UTF-8
 LazyData: true
